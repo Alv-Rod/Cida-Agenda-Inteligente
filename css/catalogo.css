@@ -1,0 +1,65 @@
+@import url(imports.css);
+
+
+
+#catalog {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0 3rem;
+}
+
+.catalog-header {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--bg-second);
+}
+
+#catalog-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 196px;
+    padding: 1rem;
+    font-size: 0.75rem;
+}
+
+.product .desc {
+    max-height: 1.7rem;
+    overflow-y: hidden;
+    position: relative;
+}
+
+/* .product .desc::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;   
+    bottom: 0;
+    height: 5px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0), white);
+} */
+
+.product img {
+    width: 128px;
+}
+
+.product .prices {
+    display: flex;
+    font-size: 1rem;
+}
+
+.sale-price {
+    padding-left: 0.5rem;
+    
+}

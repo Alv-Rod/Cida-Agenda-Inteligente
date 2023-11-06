@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Compras</title>
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>  
+    <nav class="navbar">
+        <ul class="navbar-main">
+            <li class="nav_btn"><a href="painel.html"><img src="img/icons/house.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="catalogo.html"><img src="img/icons/basket.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="alarme.html"><img src="img/icons/clock.png" alt="" class="icon"></a></li>
+        </ul>
+        <a href=""><img src="img/icons/gear.png" alt="" class="icon"></a>
+    </nav>
+    
+    <main>
+        <header>
+            <input type="text" name="" id="search-bar-catalog" class="search-bar">
+            <label for="search-bar-catalog">
+                <img src="img/icons/magnifier.png" alt="" class="icon">
+            </label>
+            <button id="user">
+                <img src="img/icons/user_transparent.png" alt="" class="icon">
+            </button>
+            <button id="notification">
+                <img src="img/icons/bell.png" alt="" class="icon">
+            </button>
+        </header>
+        <div class="page-content">
+            <div id="catalog">
+                <div class="catalog-header">
+                    <button class="cat-header-btn">
+                        Em Promoção
+                    </button>
+                    <button class="cat-header-btn">
+                        Entrega Grátis
+                    </button>
+                    <select name="price-sort" id="price-sort" class="dropdown">
+                        <option value="crescente">Crescente</option>
+                        <option value="decrescente">Decrescente</option>
+                        <span class="drop-icon" id="price-sort-drop"><img src="img/icons/down.png" alt=""></span>
+                    </select>
+                </div>
+    
+                <div id="catalog-main">
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <div class="prices">
+                                <p class="price">R$25,00</p>
+                                <p class="sale-price">R$24,90</p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="prod-preview">
+                            <span><img src="img/icons/groceries.png" alt=""></span>
+                        </div>
+                        <div class="prod-description">
+                            <p class="desc">Nome do produto nome do produto nome do produto</p>
+                            <p class="brand">Marca</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <aside class="filter-section">
+                
+                <div>
+                    <h2>Filtro</h2>
+                    <hr>
+                    <label for="category-filter">Categoria</label>
+                    <select name="category-filter" id="category-filter">
+                        <option value="Açougue">Açougue</option>
+                        <option value="Açougue">Padaria</option>
+                        <option value="Açougue">Laticínios</option>
+                        <option value="Açougue">Mercearia</option>
+                    </select>
+                    <p>Produtos</p>
+                    <label for="nacionais">Nacionais</label>
+                    <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="nacionais" value="nacionais">
+                    <label for="internacionais">Internacionais</label>
+                    <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="internacionais" value="internacionais">
+        
+                    <button>
+                        Ver Carrinho
+                        <img src="img/icons/cart.png" alt="" class="icon">
+                    </button>
+                </div>
+                
+            </aside>
+        </div>
+        
+    </main>
+</body>
+</html>
