@@ -8,12 +8,16 @@
 </head>
 <body>  
     <nav class="navbar">
+        
         <ul class="navbar-main">
             <li class="nav_btn"><a href="painel.html"><img src="img/icons/house.png" alt="" class="icon"></a></li>
             <li class="nav_btn"><a href="catalogo.html"><img src="img/icons/basket.png" alt="" class="icon"></a></li>
             <li class="nav_btn"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
             <li class="nav_btn"><a href="alarme.html"><img src="img/icons/clock.png" alt="" class="icon"></a></li>
         </ul>
+        <button id="user">
+            <img src="img/icons/user_transparent.png" alt="" class="icon">
+        </button>
         <a href=""><img src="img/icons/gear.png" alt="" class="icon"></a>
     </nav>
     
@@ -23,9 +27,7 @@
             <label for="search-bar-catalog">
                 <img src="img/icons/magnifier.png" alt="" class="icon">
             </label>
-            <button id="user">
-                <img src="img/icons/user_transparent.png" alt="" class="icon">
-            </button>
+            
             <button id="notification">
                 <img src="img/icons/bell.png" alt="" class="icon">
             </button>
@@ -33,13 +35,18 @@
         <div class="page-content">
             <div id="catalog">
                 <div class="catalog-header">
-                    <button class="cat-header-btn">
-                        Em Promoção
-                    </button>
-                    <button class="cat-header-btn">
-                        Entrega Grátis
-                    </button>
-                    <select name="price-sort" id="price-sort" class="dropdown">
+                    <div class="radio-btn">
+                        <input type="radio" name="cat-sort" id="sort-sales" class="sort-radio"> 
+                        <label for="sort-sales" class="sort-label">Em Promoção</label>
+                    </div>
+                    <div class="radio-btn">
+                        <input type="radio" name="cat-sort" id="sort-shipping" class="sort-radio">
+                        <label for="sort-shipping" class="sort-label">Entrega Grátis</label>
+                    </div>
+                        
+                    
+                        
+                    <select name="price-sort" id="price-sort" class="dropdown" class="sort-radio">
                         <option value="crescente">Crescente</option>
                         <option value="decrescente">Decrescente</option>
                         <span class="drop-icon" id="price-sort-drop"><img src="img/icons/down.png" alt=""></span>
@@ -52,13 +59,14 @@
                             <span><img src="img/icons/groceries.png" alt=""></span>
                         </div>
                         <div class="prod-description">
-                            <p class="desc">Nome do produto nome do produto nome do produto nome do produto nome do produto</p>
-                            <p class="brand">Marca</p>
+                            <div class="desc">
+                                <p class="title">Nome do produto nome do produto nome do produto nome do produto nome do produto</p>
+                                <p class="brand">Marca</p>
+                            </div>
                             <div class="prices">
                                 <p class="price">R$25,00</p>
                                 <p class="sale-price">R$24,90</p>
                             </div>
-                            
                         </div>
                     </div>
                     <div class="product">
