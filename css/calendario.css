@@ -1,0 +1,23 @@
+@import url(imports.css);
+
+.page-content {
+    margin: 0 3rem;
+    width: auto;
+}
+/* 
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 1px solid black;
+} */
+
+.calendar ul {
+    display: flex;
+}
+
+.calendar li {
+    width: calc(100% / 7);
+}

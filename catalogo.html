@@ -34,7 +34,7 @@
         </header>
         <div class="page-content">
             <div id="catalog">
-                <div class="catalog-header">
+                <div class="catalog-header page-header">
                     <div class="radio-btn">
                         <input type="radio" name="cat-sort" id="sort-sales" class="sort-radio"> 
                         <label for="sort-sales" class="sort-label">Em Promoção</label>
@@ -46,11 +46,14 @@
                         
                     
                         
-                    <select name="price-sort" id="price-sort" class="dropdown" class="sort-radio">
-                        <option value="crescente">Crescente</option>
-                        <option value="decrescente">Decrescente</option>
-                        <span class="drop-icon" id="price-sort-drop"><img src="img/icons/down.png" alt=""></span>
-                    </select>
+                    <button id="price-sort" class="dropdown" >
+                        <span id="price-sort-drop">Preço <img src="img/icons/down.png" class="drop-icon" alt=""></span>
+                        <ul>
+                            <li id="crescente" data-sort="crescente">Crescente</li>
+                            <li id="decrescente" data-sort="decrescente">Decrescente</li>
+                        </ul>
+                    </button> 
+                    
                 </div>
     
                 <div id="catalog-main">
@@ -62,6 +65,7 @@
                             <div class="desc">
                                 <p class="title">Nome do produto nome do produto nome do produto nome do produto nome do produto</p>
                                 <p class="brand">Marca</p>
+                                <p class="market">SuperNosso</p>
                             </div>
                             <div class="prices">
                                 <p class="price">R$25,00</p>
@@ -76,8 +80,8 @@
                         <div class="prod-description">
                             <p class="desc">Nome do produto nome do produto nome do produto</p>
                             <p class="brand">Marca</p>
-                            <p class="price">R$2500,00</p>
-                            <p class="sale-price">R$240,90</p>
+                            <p class="price">R$25,00</p>
+                            <p class="sale-price">R$24,90</p>
                         </div>
                     </div>
                     <div class="product">
@@ -150,29 +154,43 @@
             </div>
     
             <aside class="filter-section">
-                
-                <div>
-                    <h2>Filtro</h2>
-                    <hr>
-                    <label for="category-filter">Categoria</label>
-                    <select name="category-filter" id="category-filter">
-                        <option value="Açougue">Açougue</option>
-                        <option value="Açougue">Padaria</option>
-                        <option value="Açougue">Laticínios</option>
-                        <option value="Açougue">Mercearia</option>
-                    </select>
-                    <p>Produtos</p>
-                    <label for="nacionais">Nacionais</label>
-                    <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="nacionais" value="nacionais">
-                    <label for="internacionais">Internacionais</label>
-                    <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="internacionais" value="internacionais">
-        
-                    <button>
-                        Ver Carrinho
-                        <img src="img/icons/cart.png" alt="" class="icon">
-                    </button>
+                <h2>Filtro</h2>
+                <hr>
+                <h3>Categoria</h3>
+                <ul id="category-filter-list">
+                    <li>
+                        <input type="checkbox" name="category-filter" id="acougue" value="acougue">
+                        <label for="acougue">Açougue</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="category-filter" id="padaria" value="padaria">
+                        <label for="padaria">Padaria</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="category-filter" id="laticinios" value="laticinios">
+                        <label for="laticinios">Laticínios</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="category-filter" id="mercearia" value="mercearia">
+                        <label for="mercearia">Mercearia</label>
+                    </li>
+                </ul>
+                <h3>Produtos</h3>
+                <div class="filter-origin">
+                    <label for="nacionais">
+                        <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="nacionais" value="nacionais">
+                        Nacionais
+                    </label>
+                    <label for="internacionais">
+                        <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="internacionais" value="internacionais">
+                        Internacionais
+                    </label>
                 </div>
                 
+                <button id="see-cart">
+                    Ver Carrinho
+                    <img src="img/icons/cart.png" alt="" class="icon">
+                </button>
             </aside>
         </div>
         

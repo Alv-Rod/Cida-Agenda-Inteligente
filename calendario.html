@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="css/calendario.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-main">
+            <li class="nav_btn"><a href="painel.html"><img src="img/icons/house.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="catalogo.html"><img src="img/icons/basket.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="alarme.html"><img src="img/icons/clock.png" alt="" class="icon"></a></li>
+        </ul>
+        <button id="user">
+            <img src="img/icons/user_transparent.png" alt="" class="icon">
+        </button>
+        <a href=""><img src="img/icons/gear.png" alt="" class="icon"></a>
+    </nav>
+
+    <main>
+        <header>
+            <input type="text" name="" id="search-bar-catalog" class="search-bar">
+            <label for="search-bar-catalog">
+                <img src="img/icons/magnifier.png" alt="" class="icon">
+            </label>
+            
+            <button id="notification">
+                <img src="img/icons/bell.png" alt="" class="icon">
+            </button>
+        </header>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1 id="current-date">
+
+                </h1>
+            </div>
+            <div id="calendar">
+                <ul id="days">
+                    
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="js/calendario.js"></script>
+</body>
+</html>

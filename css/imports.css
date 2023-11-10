@@ -5,13 +5,14 @@
 }
 
 :root {
-    --bg-main: #fff;
-    --bg-second: #eaeaea;
-    --bg-third: #cecece;
-    --accent-light: #fff;
-    --accent-mid: #cecece;
-    --accent-dark: #6b6b6b;
-    --font-dark: #000;
+    --bg-white: #fff;
+    --bg-main: #E5EFD0;
+    --bg-second: #76CE76;
+    --accent-light: #e8e6e6;
+    --gray: #f0f0f0;
+    --accent-mid: #76CE76;
+    --accent-dark: #62a962;
+    --font-dark: #30303A;
     --font-light: #fff;
 }
 
@@ -20,7 +21,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-    appearance: none;
+    display: none;
 }
 
 a {
@@ -32,34 +33,63 @@ img {
     display: block;
 }
 
-h1 {
+h1, h2, h3 {
     color: var(--font-dark);
-    font-size: 1.5rem;
+    font-size: 3vh;
 }
 
-button {
+button, select, input[type=radio] + label, .dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: none;
-    border-radius: 15px;
-    background-color: var(--accent-light);
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--bg-white);
     padding: 0.5rem;
+    font-size: 2.5vh;
 }
 
-button:hover {
+button:hover, input[type=radio]:hover + label{
+    background-color: var(--accent-dark);
+    color: var(--font-light);
+
+}
+
+input[type=radio]:checked + label {
     background-color: var(--accent-mid);
 }
+
+input[type=checkbox] {
+    appearance: none;
+    width: 1.15vmax;
+    height: 1.15vmax;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+input[type=checkbox]:hover {
+    background-color: var(--accent-dark);
+}
+
+input[type=checkbox]:checked {
+    background-color: var(--accent-mid);
+}
+
 
 ul {
     list-style-type: none;
 }
 
-li {
+li,p {
     display: block;
+    font-size: 2.5vh;
 }
 
 label {
     color: var(--font-dark);
-    font-size: 1rem;
+    font-size: 2.5vh;
 }
 
 body {
@@ -74,19 +104,79 @@ main {
     height: 100%;
     max-height: 100vh;
     width: 100%;
-    background-color: var(--bg-main);
+    background-color: var(--bg-white);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .page-content {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 92%;
+    /* margin: 0 3rem; */
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 15px;
+    background-color: var(--bg-main);
+    margin-bottom: 0.5rem;
+    height: 10%;
 }
 
 .icon {
-    width: 30px;
+    width: 2.3vmax;
     height: auto;
+}
+
+.drop-icon {
+    width: 1.5vh;
+    height: auto;
+}
+
+.dropdown{
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    width: 12vmax;
+}
+
+.dropdown span {
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown ul {
+    display: none;
+    background-color: var(--bg-white);
+    color: var(--font-dark);
+    border-radius: 0 0 15px 15px;
+    width: inherit;
+    text-align: left;
+    position: absolute;
+}
+
+.dropdown > ul > li {
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+}
+
+.dropdown li:hover {
+    background-color: var(--accent-dark);
+    border-radius: 0 0 15px 15px;
+    
+}
+
+.dropdown:hover > ul {
+    display: block;
+}
+
+.dropdown:hover {
+    border-radius: 15px 15px 0 0;
 }
 
 .navbar, .navbar-main {
@@ -99,35 +189,65 @@ main {
 
 .navbar {
     justify-content: space-between;
-    padding: 0.25rem;
+    /* padding-left: 0.5rem; */
     background-color: var(--bg-second);
+    /* position: relative; */
+}
+
+.navbar-main {
+    width: 100%;
 }
 
 .navbar li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     padding: 0.5rem;
-    margin-top: 1rem;
-    border-radius: 15px;
+    margin: 1rem 0 0 1rem;
+    border-radius: 15px 0 0 15px ;
+    background-color: white;
 }
+
 
 .navbar li:hover {
     background-color: var(--accent-mid);
 }
 
-aside {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
 header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    height: 8%;
     width: 100%;
 }
-aside > div {
-    background-color: var(--bg-second);
-    height: 100%;
-    padding: 0.5rem;
-    margin: 0 1rem 1rem 1rem ;
+
+aside  {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-main);
+    border-radius: 15px;
+    width: 30%;
+    
+    padding: 1.75rem;
+    margin: 0 1rem 1rem 1rem;
+    /* margin: 0 1rem 1rem 1rem; */
 }
 
+aside li {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+aside button {
+    margin-top: auto;
+}
+
+aside label {
+    font-size: 2.2vh;
+}
+
+aside hr {
+    margin: 1rem 0 ;
+}
