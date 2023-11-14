@@ -37,18 +37,41 @@
     background-color: aliceblue;
     margin: 0.5rem;
     border-radius: 15px;
+    height: 100%;
 }
 
 #event-carrousel{
     display: flex;
+    height: 100%;
 }
 
 #cart-supreme-div{
     display: flex;
 }
 
-.cart-img{
-    width: 30%;
+#cart-supreme-div img{
+    width: 40%;
+}
+
+.carrousel-payment{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    background-color: aliceblue;
+    border-radius: 15px;
+    width: 100%;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.market-payments, .date-payments{
+    opacity: 0.7;
 }
 
 #panel{
