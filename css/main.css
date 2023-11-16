@@ -19,6 +19,7 @@
 
 #card-bottom{
     display: flex;
+    height: 33.9%;
 }
 
 .cart{
@@ -45,12 +46,32 @@
     height: 100%;
 }
 
-#cart-supreme-div{
-    display: flex;
+#market-content{
+    align-items: center;
 }
 
+#cart-supreme-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#market-line{
+    display: flex;
+    height: 5rem;
+}
+
+#market-description p{
+    font-size: 2vh;
+}
+
+
+
 #cart-supreme-div img{
-    width: 40%;
+    width: 4.5rem;
+}
+
+.payment-card{
+    padding: 1rem 0.5rem 0.5rem 1rem;
 }
 
 .carrousel-payment{
