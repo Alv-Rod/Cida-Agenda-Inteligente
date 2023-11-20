@@ -71,6 +71,8 @@
     background-color: var(--bg-main);
 }
 
+
+
 .product:hover {
     transition: all 0.15s ease-in-out;
     translate: 0 -0.5vh;

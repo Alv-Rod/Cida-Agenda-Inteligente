@@ -14,10 +14,10 @@
             <li class="nav_btn"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
             <li class="nav_btn"><a href="alarme.html"><img src="img/icons/clock.png" alt="" class="icon"></a></li>
         </ul>
-        <button id="user">
-            <img src="img/icons/user_transparent.png" alt="" class="icon">
-        </button>
-        <a href=""><img src="img/icons/gear.png" alt="" class="icon"></a>
+        <ul class="navbar-settings">
+            <li><a href="" id="user"> <img src="img/icons/user_transparent.png" alt="" class="icon"></a></li>
+            <li><a href="" id="config"><img src="img/icons/gear.png" alt="" class="icon"></a></li>
+        </ul>
     </nav>
 
     <main>
@@ -42,9 +42,68 @@
                 <ul id="days">
                     
                 </ul>
+                <button>Próximo Mês</button>
             </div>
+            
         </div>
     </main>
+
+    <template id="event-summary-template">
+        <div class="event-popup">
+            <div class="section-title">
+                <svg class="x-icon" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="14.22222" height="14.22222" viewBox="0 0 14.22222 14.22222"><line x1="1" y1="13.22222" x2="13.22222" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><line x1="13.22222" y1="13.22222" x2="1" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+                <h1>Eventos</h1>
+            </div>
+            <div class="events-summary">
+            </div>
+            <div class="section-bottom">
+                <button id="see-more-events">
+                    Ver Mais...
+                </button>
+                <button id="add-event">
+                    <svg id="afe4711f-0120-4ea0-8f3f-83147e6ad54d" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="15.60156" height="16.44922" viewBox="0 0 15.60156 16.44922"><path d="M10.17676,5.669h5.4248v5.06152h-5.4248v5.71875H5.376V10.73047H0V5.669H5.376V0h4.80078Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </template>
+    
+    <template id="event-add-template">
+        <div class="event-popup">
+            <div class="section-title">
+                <svg class="x-icon" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="14.22222" height="14.22222" viewBox="0 0 14.22222 14.22222"><line x1="1" y1="13.22222" x2="13.22222" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><line x1="13.22222" y1="13.22222" x2="1" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+                <p>Novo Evento</p>
+            </div>
+            <div class="event-form">
+                <form id="event-add-form">
+                    <input type="text" name="name" id="event-name" placeholder="Nome">
+                    <div>
+                        <textarea name="description" id="event-description" placeholder="Descrição"></textarea>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="date" name="date" id="date-start" placeholder="Começa">
+                            <input type="date" name="date" id="date-end" placeholder="Termina">
+                        </div>
+                        <div>
+                            <input type="radio" name="all-day" id="all-day">
+                            <label for="all-day">Dia Todo</label>
+                        </div>
+                    </div>
+                    <div class="dropdown" id="event-type">
+                        <p id="type-top"><span id="type-selected">Tipo</span> <svg class="icon drop-icon" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" width="11.90944" height="7.74374" viewBox="0 0 11.90944 7.74374"><path d="M5.52775,5.27909,1.07711.20911a.545.545,0,0,0-.8867.04h0A1.03837,1.03837,0,0,0,.22318,1.49183L5.52775,7.53464a.54046.54046,0,0,0,.85394,0l5.30457-6.04282A1.03835,1.03835,0,0,0,11.719.24912v0a.545.545,0,0,0-.88671-.04l-4.45063,5.07A.54047.54047,0,0,1,5.52775,5.27909Z"/></svg></p>
+                        <ul>
+                            <li id="type-compromisso">Compromisso</li>
+                            <li id="type-aniversario">Aniversário</li>
+                            <li id="type-lembrete">Lembrete</li>
+                            <li id="type-outro">Outro</li>
+                        </ul>
+                    </div>
+                    <button id="event-submit">Adicionar Evento</button>
+                </form>
+            </div>
+        </div>
+    </template>
+
     <script type="module" src="js/calendario.js"></script>
 </body>
 </html>
