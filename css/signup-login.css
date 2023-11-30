@@ -1,0 +1,89 @@
+@import url(imports.css);
+
+@keyframes scaleUp {
+	0% {
+		transform: scale(100%);
+	}
+	100% {
+		transform: scale(120%);
+	}
+}
+
+main{
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg-main);
+}
+
+.container{
+	padding: 2rem;
+	border-radius: 15px;
+	border: none;
+	background-color: var(--bg-second);
+	width: 30%;
+	transform: scale(120%);
+	animation: 0.4s ease-in-out scaleUp;
+}
+
+
+.input-container{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+
+input{
+	height: 10%;
+	padding: 0.5rem;
+	width: 100%;
+	border-radius: 8px;
+	border: none;
+	background-color: var(--bg-main);
+}
+
+button{
+	margin-top: 2rem;
+	padding: 0.5rem;
+	width: 100%;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+a {
+	display: inline;
+	text-decoration: none;
+}
+
+p{
+	margin-top: 0.5rem;
+	font-size: small;
+}
+
+#name-error, #pass-error, #email-error,  #confirm-error {
+	color: rgb(190, 15, 15);
+	font-size: 1.8vh;
+}
+
+@media screen and (max-width: 425px) {
+	@keyframes scaleUp {
+		0% {
+			transform: scale(80%);
+		}
+		100% {
+			transform: scale(100%);
+		}
+	}
+	.container{
+		padding: 2rem;
+		border-radius: 15px;
+		border: none;
+		background-color: var(--bg-second);
+		width: 90%;
+		transform: scale(100%);
+		animation: 0.4s ease-in-out scaleUp;
+	}
+}

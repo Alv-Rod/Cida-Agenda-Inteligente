@@ -10,9 +10,8 @@
     <nav class="navbar">
         <ul class="navbar-main">
             <li class="nav_btn"><a href="painel.html"><img src="img/icons/house.png" alt="" class="icon"></a></li>
+            <li class="nav_btn navbar-current"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
             <li class="nav_btn"><a href="catalogo.html"><img src="img/icons/basket.png" alt="" class="icon"></a></li>
-            <li class="nav_btn"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
-            <li class="nav_btn"><a href="alarme.html"><img src="img/icons/clock.png" alt="" class="icon"></a></li>
         </ul>
         <ul class="navbar-settings">
             <li><a href="" id="user"> <img src="img/icons/user_transparent.png" alt="" class="icon"></a></li>
@@ -23,7 +22,7 @@
     <main>
         <header>
             <input type="text" name="" id="search-bar-catalog" class="search-bar">
-            <label for="search-bar-catalog">
+            <label for="search-bar-catalog" class="search-bar-label">
                 <img src="img/icons/magnifier.png" alt="" class="icon">
             </label>
             
@@ -37,12 +36,21 @@
                 <h1 id="current-date">
 
                 </h1>
+                <div class="month-control-btns">
+                    <button class="prev-month">Mês Anterior</button>
+                    <button class="next-month">Próximo Mês</button>
+                </div>
             </div>
             <div id="calendar">
+                
                 <ul id="days">
                     
                 </ul>
-                <button>Próximo Mês</button>
+                <div class="month-control-btns">
+                    <button class="prev-month">Mês Anterior</button>
+                    <button class="next-month">Próximo Mês</button>
+                </div>
+                
             </div>
             
         </div>
@@ -51,14 +59,17 @@
     <template id="event-summary-template">
         <div class="event-popup">
             <div class="section-title">
-                <svg class="x-icon" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="14.22222" height="14.22222" viewBox="0 0 14.22222 14.22222"><line x1="1" y1="13.22222" x2="13.22222" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><line x1="13.22222" y1="13.22222" x2="1" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+                <button class="close-btn">
+                    <svg class="x-icon" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="14.22222" height="14.22222" viewBox="0 0 14.22222 14.22222"><line x1="1" y1="13.22222" x2="13.22222" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><line x1="13.22222" y1="13.22222" x2="1" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+                </button>
                 <h1>Eventos</h1>
             </div>
             <div class="events-summary">
+                
             </div>
             <div class="section-bottom">
-                <button id="see-more-events">
-                    Ver Mais...
+                <button id="see-more">
+                    Veja Mais...
                 </button>
                 <button id="add-event">
                     <svg id="afe4711f-0120-4ea0-8f3f-83147e6ad54d" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="15.60156" height="16.44922" viewBox="0 0 15.60156 16.44922"><path d="M10.17676,5.669h5.4248v5.06152h-5.4248v5.71875H5.376V10.73047H0V5.669H5.376V0h4.80078Z"/></svg>
@@ -70,22 +81,22 @@
     <template id="event-add-template">
         <div class="event-popup">
             <div class="section-title">
-                <svg class="x-icon" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="14.22222" height="14.22222" viewBox="0 0 14.22222 14.22222"><line x1="1" y1="13.22222" x2="13.22222" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><line x1="13.22222" y1="13.22222" x2="1" y2="1" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
-                <p>Novo Evento</p>
+                <button class="close-btn">
+                    <svg class="x-icon" data-name="Layer 6" xmlns="http://www.w3.org/2000/svg" width="14.22222" height="14.22222" viewBox="0 0 14.22222 14.22222"><line x1="1" y1="13.22222" x2="13.22222" y2="1" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/><line x1="13.22222" y1="13.22222" x2="1" y2="1" fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/></svg>
+                </button>
+                <h1>Novo Evento</h1>
             </div>
             <div class="event-form">
                 <form id="event-add-form">
-                    <input type="text" name="name" id="event-name" placeholder="Nome">
-                    <div>
-                        <textarea name="description" id="event-description" placeholder="Descrição"></textarea>
-                    </div>
-                    <div>
-                        <div>
-                            <input type="date" name="date" id="date-start" placeholder="Começa">
-                            <input type="date" name="date" id="date-end" placeholder="Termina">
+                    <input type="text" name="name" id="event-name" placeholder="Nome" autocomplete="off"> 
+                    <input type="text" name="description" id="event-description" placeholder="Descrição"autocomplete="off">
+                    <div class="timeframe-master-container">
+                        <div class="time-container">
+                            <input type="time" name="date" id="date-start" placeholder="Começa" autocomplete="off">
+                            <input type="time" name="date" id="date-end" placeholder="Termina" autocomplete="off">
                         </div>
-                        <div>
-                            <input type="radio" name="all-day" id="all-day">
+                        <div class="check-container">
+                            <input type="checkbox" name="all-day" id="all-day" autocomplete="off">
                             <label for="all-day">Dia Todo</label>
                         </div>
                     </div>
@@ -98,12 +109,21 @@
                             <li id="type-outro">Outro</li>
                         </ul>
                     </div>
-                    <button id="event-submit">Adicionar Evento</button>
+                    <button id="event-submit">Salvar</button>
                 </form>
             </div>
         </div>
     </template>
 
+    <template id="summary-item-template">
+            <div class="display-event">
+                <p class="display-event-name"></p>
+                <div class="sub-desc">
+                    <p class="display-event-type"></p>
+                    <p class="display-event-description"></p>
+                </div>
+            </div>
+    </template>
     <script type="module" src="js/calendario.js"></script>
 </body>
 </html>

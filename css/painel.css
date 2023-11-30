@@ -1,0 +1,201 @@
+@import url(imports.css);
+
+* {
+    scroll-behavior: smooth;
+}
+
+#panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem 1rem 3rem;
+}
+
+.events,
+.cart,
+.payment-card {
+    background-color: var(-);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+#card-bottom {
+    display: flex;
+    height: 30%;
+}
+
+.cart {
+    margin-right: 0.5rem;
+    width: 50%;
+    padding: 1rem;
+    background-color: var(--bg-main);
+}
+
+.events {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 1rem 2.5rem;
+    height: 70%;
+    width: 100%;
+    background-color: var(--bg-main);
+}
+
+.event-header,
+.event-description,
+.event-info{
+    margin: 0.5rem;
+}
+
+.event-type{
+    font-weight: bold;
+    font-size: 2.75vh;
+    opacity: 0.8;
+}
+
+.event-time-info{
+    opacity: 0.7;
+    font-size: 3vh;
+}
+
+#event-carousel {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: scroll;
+    /* overflow-y:visible; */
+    width: 100%;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--bg-white);
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 15px;
+    height: 80%;
+    flex: 0 0 28%;
+    width: 28%;
+}
+
+#market-content {
+    height: 100%;
+}
+
+#cart-supreme-div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+#market-line {
+    display: flex;
+    height: 5rem;
+}
+
+#market-description p {
+    font-size: 2vh;
+}
+
+#cart-supreme-div img {
+    width: 4.5rem;
+}
+
+.payment-card {
+    background-color: var(--bg-main);
+    padding: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.carrousel-payment {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.payment {
+    background-color: var(--bg-white);
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    border-radius: 15px;
+    width: 100%;
+    padding: 0.5rem;
+    justify-content: space-between;
+}
+
+.market-payments,
+.date-payments {
+    opacity: 0.7;
+}
+
+#btn-prev,
+#btn-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    padding: 0.5rem;
+    border-radius: 50%;
+    top: 50%;
+}
+
+#btn-prev {
+    left: 0;
+    margin-left: 0.25rem;
+}
+
+#btn-next {
+    right: 0;
+    margin-right: 0.25rem;
+}
+
+aside {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 425px) {
+    main .page-content {
+        margin: 0;
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+    #panel {
+        padding: 0.5rem;
+        height: 120%;
+    }
+
+    .events, .cart, .payment-card {}
+
+    #card-bottom {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .events {
+        height: 100%;
+        margin: 0;
+    }
+
+    .event-card {
+        flex:none;
+        width: 90%;
+        height: 90%;
+    }
+
+    .cart {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .payment-card {
+        margin: 1rem 0;
+    }
+}

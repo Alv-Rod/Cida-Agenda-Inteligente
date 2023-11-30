@@ -1,5 +1,22 @@
 @import url(imports.css);
 
+
+.month-control-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.month-control-btns button {
+    font-size: 2.2vh;
+
+}
+
+.page-header .month-control-btns {
+    width: 21%;
+    margin-left: auto;
+}
+
 .page-content {
     flex-direction: column;
     margin: 0 3rem;
@@ -26,27 +43,77 @@
     display: grid;
     margin: 1rem 0;
     flex-grow: 3;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1.5fr);
+    width: 100%;
     height: 150%;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     border-radius: 15px;
 }
 
 #days .day {
     position: relative;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding: 1rem;
-    border: 1px solid gray;
+    flex-direction: column;
+    /* align-items: flex-end;
+    justify-content: flex-end; */
+    /* padding: 1rem; */
+    border: 1px solid var(--accent-dark);
+    transition: all 0.2s ease-in-out;
 }
 
-.current-day {
-    background-color: blue;
+.day .date-value {
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+#days .current-day {
+    border: 4px solid var(--bg-second);
+}
+
+.day:hover {
+    box-shadow: inset 0px 3px 3px 3px rgba(73, 73, 73, 0.099);
+
 }
 
 .week-day {
-    margin: 0 auto auto 0;
+    font-weight: bold;
+    margin: 0.5rem 0 0 0.5rem;
+}
+
+.day.previous-month .date-value, .day.next-month .date-value {
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.date-value {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    /* margin-left: auto; */
+}
+
+.events-container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* position: absolute; */
+    margin-top: 1rem;
+}
+
+.event-wrapper {
+    border-left: 4px solid var(--accent-dark);
+    transition: all 0.15s ease-in-out;
+    padding: 0.15rem 0 0.15rem 0.5rem;
+}
+
+.event-allday-wrapper {
+    background-color: var(--bg-main);
+}
+
+.event-wrapper:hover {
+    color: var(--font-light);
+    background-color: var(--accent-dark);
 }
 
 .event-popup {
@@ -81,4 +148,192 @@
     justify-content: space-between;
 }
 
+.events-summary {
+    display: flex;
+    flex-direction: column;
+}
 
+.sub-desc {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    padding: 0.5rem 1.5rem;
+}
+
+.display-event-name {
+    font-weight: bold;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
+.display-event-type {
+    font-size: 1vmax;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.display-event-description {
+    font-size: 1vmax;
+    font-weight: bold;
+    opacity: 0.8;
+    width: 50%;
+    text-align: right;
+}
+
+.event-form {
+    height: 100%;
+}
+
+#event-add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.timeframe-master-container {
+    width: 100%;
+}
+
+.close-btn {
+    margin-right: 1rem;
+    border-radius: 100%;
+    transition: all 0.1s ease-in-out;
+}
+
+.x-icon {
+    stroke: var(--font-dark);
+    width: 1.5vw;
+}
+
+.x-icon line {
+    transition: all 0.1s ease-in-out;
+}
+
+.close-btn:hover .x-icon line {
+    stroke: white;
+}
+
+.display-event-name, #event-name, #event-description, #date-start, #date-end {
+    background: none;
+    background-color: var(--bg-main);
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    border:none;
+    margin-top: 0.5rem;
+}
+
+#event-add-form input::placeholder {
+    opacity: 1;
+}
+
+#event-name, #event-description {
+    margin-bottom: 0.5rem;
+    border-radius: 15px;
+}
+
+
+#event-add-form label{
+    display: inline;
+    width: 100%;
+    background: none;
+    margin-left: 0.5rem;
+}
+
+#event-add-form label:hover {
+    color: unset;
+}
+
+.check-container {
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-container input[type="checkbox"] {
+    background-color: var(--bg-main);
+}
+
+.check-container input[type="checkbox"]:hover {
+    background-color: var(--accent-mid);
+}
+
+.check-container input[type="checkbox"]:checked {
+    background-color: var(--accent-dark);
+}
+
+.time-container {
+    display: flex;
+    width: 100%;
+}
+
+#date-start, #date-end {
+    padding-right: 0;
+}
+
+#date-start:disabled, #date-end:disabled {
+    opacity: 0.6;
+}
+
+#date-start {
+    border-radius: 15px 0 0 15px;
+}
+
+#date-end {
+    border-radius: 0 15px 15px 0;
+}
+
+#event-type {
+    margin-top: 0.5rem;
+}
+
+#event-type, #event-type ul{
+    background-color: var(--bg-main);
+    width: 100%;
+}
+
+#event-type .icon {
+    margin-right: 1rem;
+}
+
+#event-type:hover {
+    border-radius: 15px;
+}
+
+#event-type:hover ul {
+    display: none;
+}
+
+#event-type.active ul {
+    display: block;
+}
+
+#event-type.active {
+    border-radius: 15px 15px 0 0;
+}
+
+#event-submit {
+    margin-top: auto;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 425px) {
+    #current-date {
+        font-size: 2.5vh;
+    }
+    .page-header .month-control-btns {
+        display: none;
+    }
+    #days {
+        width: 100%;
+        height: 70%;
+    }
+    #days li {
+        /* font-size: vh; */
+    }
+    .event-wrapper {
+        display: none;
+    }
+}

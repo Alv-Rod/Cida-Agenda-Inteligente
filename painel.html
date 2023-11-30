@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/painel.css">
 </head>
+
 <body>
     <nav class="navbar">
         <ul class="navbar-main">
-            <li class="nav_btn"><a href="painel.html"><img src="img/icons/house.png" alt="" class="icon"></a></li>
-            <li class="nav_btn"><a href="catalogo.html"><img src="img/icons/basket.png" alt="" class="icon"></a></li>
+            <li class="nav_btn navbar-current"><a href="painel.html"><img src="img/icons/house.png" alt="" class="icon"></a></li>
             <li class="nav_btn"><a href="calendario.html"><img src="img/icons/calendar.png" alt="" class="icon"></a></li>
-            <li class="nav_btn"><a href="alarme.html"><img src="img/icons/clock.png" alt="" class="icon"></a></li>
+            <li class="nav_btn"><a href="catalogo.html"><img src="img/icons/basket.png" alt="" class="icon"></a></li>
         </ul>
-        <button id="user">
-            <img src="img/icons/user_transparent.png" alt="" class="icon">
-        </button>
-        <a href=""><img src="img/icons/gear.png" alt="" class="icon"></a>
+        <ul class="navbar-settings">
+            <li><a href="" id="user"> <img src="img/icons/user_transparent.png" alt="" class="icon"></a></li>
+            <li><a href="" id="config"><img src="img/icons/gear.png" alt="" class="icon"></a></li>
+        </ul>
     </nav>
-    
+
     <main>
         <header>
             <input type="text" name="" id="search-bar-catalog" class="search-bar">
-            <label for="search-bar-catalog">
+            <label for="search-bar-catalog" class="search-bar-label">
                 <img src="img/icons/magnifier.png" alt="" class="icon">
             </label>
             
@@ -35,79 +36,14 @@
             <div id="panel">
                 <div class="events">
                     <h1>Eventos</h1>
+                    <button id="btn-prev">
+                        <p><</p>
+                    </button>
                     <div id="event-carousel">
-                        <button id="btn-prev">
-                            <p><</p>
-                        </button>
-                        <button id="btn-next">
-                            <p>></p>
-                        </button>
-                        <div class="event-card special">
-                        <div class="event-title">
-                            <h2>titulo</h2>
-                            <p class="event-date"><span>09/10</span> - <span>18:00</span></p>
-                        </div>
-                        <div class="event-description">
-                            <p>Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.</p>
-                        </div>
-                        <div class="event-info">
-                            <p class="event-type">Reunião</p>
-                            <div class="event-location">
-                                <img class="icon" src="img/icons/down.png" alt="">
-                                <p class="event-address">Rua ruada 132</p>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="event-card special">
-                            <div class="event-title">
-                                <h2>titulo</h2>
-                                <p class="event-date"><span>09/10</span> - <span>18:00</span></p>
-                            </div>
-                            <div class="event-description">
-                                <p>Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.</p>
-                            </div>
-                            <div class="event-info">
-                                <p class="event-type">Reunião</p>
-                                <div class="event-location">
-                                    <img class="icon" src="img/icons/down.png" alt="">
-                                    <p class="event-address">Rua ruada 132</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event-card special">
-                            <div class="event-title">
-                                <h2>titulo</h2>
-                                <p class="event-date"><span>09/10</span> - <span>18:00</span></p>
-                            </div>
-                            <div class="event-description">
-                                <p>Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.</p>
-                            </div>
-                            <div class="event-info">
-                                <p class="event-type">Reunião</p>
-                                <div class="event-location">
-                                    <img class="icon" src="img/icons/down.png" alt="">
-                                    <p class="event-address">Rua ruada 132</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event-card special">
-                            <div class="event-title">
-                                <h2>titulo</h2>
-                                <p class="event-date"><span>09/10</span> - <span>18:00</span></p>
-                            </div>
-                            <div class="event-description">
-                                <p>Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.Textinho aleatorio, muitos deles.</p>
-                            </div>
-                            <div class="event-info">
-                                <p class="event-type">Reunião</p>
-                                <div class="event-location">
-                                    <img class="icon" src="img/icons/down.png" alt="">
-                                    <p class="event-address">Rua ruada 132</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    
+                    <button id="btn-next">
+                        <p>></p>
+                    </button>
                 </div>
                 <div id="card-bottom">
                     <div class="cart special">
@@ -117,7 +53,9 @@
                                 <div>
                                     <img class="cart-img" src="img/icons/cart.png" alt="">
                                 </div>
-                                <div id="market-line"><hr></div>
+                                <div id="market-line">
+                                    <hr>
+                                </div>
                                 <div id="market-description">
                                     <div id="market-items">
                                         <h2>Itens</h2>
@@ -129,7 +67,7 @@
                                     </div>
                                     <div id="market-date">
                                         <h2>Data</h2>
-                                        <p id="data-value">13/03</p>
+                                        <p id="data-value">06/12</p>
                                     </div>
                                 </div>
                             </div>
@@ -140,79 +78,77 @@
                         <div class="carrousel-payment">
                             <div class="payment">
                                 <div class="title-payment">
-                                    <h2 class="product-payments">produto</h2>
-                                    <p class="market-payments">loja</p>
+                                    <h2 class="product-payments">Cartão BHBUS</h2>
+                                    <p class="market-payments">BHBUS</p>
                                 </div>
                                 <div class="description-payment">
-                                    <p class="date-payments">31/02</p>
-                                    <p class="price-payments">R$<span class="price-value">200,00</span></p>
+                                    <p class="date-payments">01/12</p>
+                                    <p class="price-payments">R$<span class="price-value">80,00</span></p>
                                 </div>
                             </div>
                             <div class="payment">
                                 <div class="title-payment">
-                                    <h2 class="product-payments">produto</h2>
-                                    <p class="market-payments">loja</p>
+                                    <h2 class="product-payments">Conta OI Fibra</h2>
+                                    <p class="market-payments">Oi</p>
                                 </div>
                                 <div class="description-payment">
-                                    <p class="date-payments">31/02</p>
-                                    <p class="price-payments">R$<span class="price-value">200,00</span></p>
+                                    <p class="date-payments">10/12</p>
+                                    <p class="price-payments">R$<span class="price-value">124,90</span></p>
                                 </div>
                             </div>
                             <div class="payment">
                                 <div class="title-payment">
-                                    <h2 class="product-payments">produto</h2>
-                                    <p class="market-payments">loja</p>
+                                    <h2 class="product-payments">PC Gamer Ryzen</h2>
+                                    <p class="market-payments">Terabyte</p>
                                 </div>
                                 <div class="description-payment">
-                                    <p class="date-payments">31/02</p>
-                                    <p class="price-payments">R$<span class="price-value">200,00</span></p>
+                                    <p class="date-payments">16/12</p>
+                                    <p class="price-payments">R$<span class="price-value">238,90</span></p>
                                 </div>
                             </div>
                             <div class="payment">
                                 <div class="title-payment">
-                                    <h2 class="product-payments">produto</h2>
-                                    <p class="market-payments">loja</p>
+                                    <h2 class="product-payments">Jujutsu Bluray</h2>
+                                    <p class="market-payments">Amazon</p>
                                 </div>
                                 <div class="description-payment">
-                                    <p class="date-payments">31/02</p>
-                                    <p class="price-payments">R$<span class="price-value">200,00</span></p>
+                                    <p class="date-payments">16/12</p>
+                                    <p class="price-payments">R$<span class="price-value">129,90</span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <aside class="task-section">
-                <h1>Tarefas</h1>
-                <hr>
-                <ul id="category-filter-list">
-                    <li>
-                        <input type="checkbox" name="category-filter" id="acougue" value="acougue">
-                        <label for="acougue">Açougue</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="category-filter" id="padaria" value="padaria">
-                        <label for="padaria">Padaria</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="category-filter" id="laticinios" value="laticinios">
-                        <label for="laticinios">Laticínios</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" name="category-filter" id="mercearia" value="mercearia">
-                        <label for="mercearia">Mercearia</label>
-                    </li>
-                </ul>
-                <h3>Produtos</h3>
-                <div class="filter-origin">
-                    <label for="nacionais">
-                        <input type="checkbox" name="filter-prod-checkbox" class="prod-checkbox" id="nacionais" value="nacionais">
-                        Nacionais
-                    </label>
-                </div>
-            </aside>
         </div>
     </main>
-    <script type="module" src="js/panel.js"></script>
+
+    <template id="event-card-template">
+        <div class="event-card special">
+            <div class="event-header">
+                <h2 class="title"></h2>
+                <p class="event-time-info"><span class="event-date"></span> - <span class="event-time"></span></p>
+            </div>
+            <div class="event-description">
+                <p></p>
+            </div>
+            <div class="event-info">
+                <p class="event-type"></p>
+            </div>
+        </div>
+    </template>
+
+    <template id="event-placeholder-template">
+        <div class="event-placeholder">
+            <div>
+                <p>Ainda não há nada aqui =( <br>
+                Adicione eventos no calendario e eles serão exibidos aqui!</p>
+                <button><a href="calendario.html">Ver meu calendário</a></button>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="js/database/eventsModule.js"></script>
+    <script type="module" src="js/painel.js"></script>
 </body>
 </html>
